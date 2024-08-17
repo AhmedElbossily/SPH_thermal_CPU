@@ -8,61 +8,25 @@
 struct Particles
 {
 
-	// position, velocity and velocity at boundary condition
+	// position
 
 	float3_t *pos = 0;
-	float3_t *vel = 0;
-	float3_t *vel_bc = 0;
 
-	// smoothing length, density, pressure
+	// smoothing length, density, ..etc
 	float_t *h = 0;
 	float_t *rho = 0;
 	float_t *mass = 0;
-	float_t *p = 0;
-
-	// deviatoric stress state, artificial stress
-	mat3x3_t *S = 0;
-	mat3x3_t *R = 0;
-
-	// contact forces, friction forces and normals at contact
-	float3_t *fc = 0;
-	float3_t *ft = 0;
-	float3_t *n = 0;
-
-	// flags
-	float_t *fixed = 0;	  // particle is fixed in space
-	float_t *blanked = 0; // particle is deactivated
-
-	// plastic state (equivalent)
-	float_t *eps_pl;
-	float_t *eps_pl_dot;
+	float_t *cp;
+	float_t *k;
 
 	// thermal state
 	float_t *T = 0;
 
 	// temporal ders
-	float3_t *pos_t = 0;
-	float3_t *vel_t = 0;
-	float_t *rho_t = 0;
-	mat3x3_t *S_t = 0;
 	float_t *T_t = 0;
 
-	// spatial ders
-	mat3x3_t *S_der = 0;
-	mat3x3_t *v_der = 0;
-
-	// debug
-	int *num_nbh = 0;
-
-	// hashing
-	int *idx = 0;  // unsigned int should be avoided on gpu
-	int *hash = 0; //		see best practices guide
-
-	// count on host (!)
+	// count on host
 	unsigned int N;
-
-	float_t *cp;
-	float_t *k;
 
 	Particles(unsigned int N);
 	~Particles();

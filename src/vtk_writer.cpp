@@ -4,7 +4,7 @@ void vtk_writer_write(Particles *particles, unsigned int step)
     unsigned int N_particles = particles->N;
 
     char buf[256];
-    sprintf(buf, "../results/output_%d.vtk", step);
+    sprintf(buf, "../results/output_%012d.vtk", step);
     FILE *fp = fopen(buf, "w+");
 
     fprintf(fp, "# vtk DataFile Version 2.0\n");

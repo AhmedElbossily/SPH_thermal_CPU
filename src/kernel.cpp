@@ -14,6 +14,11 @@ float_t lapl_pse(float3_t posi, float3_t posj, float_t hi)
     float_t zij = zi - zj;
 
     float_t xx = sqrt(xij * xij + yij * yij + zij * zij);
+    if (xx<1.e-6)
+    {
+        return 0;
+    }
+    
 
     float_t h2 = hi * hi;
     float_t h4 = h2 * h2;
