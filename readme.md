@@ -5,6 +5,25 @@ This project implements a CPU-based Smoothed Particle Hydrodynamics (SPH) therma
 
 ![SPH_thermal_CPU_1](SPH_thermal_CPU_1.gif)
 
+## File structure
+.
+├── CMakeLists.txt
+├── include
+│   ├── glm
+│   ├── interaction.h
+│   ├── kernel.h
+│   ├── particle.h
+│   ├── type.h
+│   └── vtk_writer.h
+├── readme.md
+├── SPH_thermal_CPU_1.gif
+└── src
+    ├── interaction.cpp
+    ├── kernel.cpp
+    ├── main.cpp
+    ├── particle.cpp
+    └── vtk_writer.cpp
+
 ## Building the project
 
 1. Clone the repository:
