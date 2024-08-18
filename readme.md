@@ -3,11 +3,13 @@
 
 This project implements a CPU-based Smoothed Particle Hydrodynamics (SPH) thermal simulation.
 
+![SPH_thermal_CPU_1](SPH_thermal_CPU_1.gif)
+
 ## Building the project
 
 1. Clone the repository:
 ```
-https://github.com/AhmedElbossily/SPH_thermal_CPU.git
+git clone https://github.com/AhmedElbossily/SPH_thermal_CPU.git
 ```
 
 2. Open the terminal and navigate to the `SPH_thermal_CPU` directory:
