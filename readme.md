@@ -6,6 +6,8 @@ This project implements a CPU-based Smoothed Particle Hydrodynamics (SPH) therma
 ![SPH_thermal_CPU_1](SPH_thermal_CPU_1.gif)
 
 ## File structure
+
+```
 .
 ├── CMakeLists.txt
 ├── include
@@ -23,6 +25,8 @@ This project implements a CPU-based Smoothed Particle Hydrodynamics (SPH) therma
     ├── main.cpp
     ├── particle.cpp
     └── vtk_writer.cpp
+```
+
 
 ## Building the project
 
