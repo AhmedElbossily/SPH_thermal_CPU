@@ -1,0 +1,4 @@
+# Ignore all .vtk files
+*.vtk
+# Ignore the build directory
+build/

@@ -1,22 +1,26 @@
 #include "vtk_writer.h"
 void vtk_writer_write(Particles *particles, unsigned int step)
 {
+    // number of particles in the simulation
     unsigned int N_particles = particles->N;
 
     char buf[256];
+    // output file name
     sprintf(buf, "../results/output_%012d.vtk", step);
     FILE *fp = fopen(buf, "w+");
 
+    // write vtk file header
     fprintf(fp, "# vtk DataFile Version 2.0\n");
     fprintf(fp, "mfree iwf\n");
     fprintf(fp, "ASCII\n");
     fprintf(fp, "\n");
 
-    fprintf(fp, "DATASET UNSTRUCTURED_GRID\n"); // Particle positions
+    fprintf(fp, "DATASET UNSTRUCTURED_GRID\n");
     fprintf(fp, "POINTS %d float\n", N_particles);
     for (unsigned int i = 0; i < N_particles; i++)
     {
-        fprintf(fp, "%f %f %f\n", particles->pos[i].x, particles->pos[i].y, particles->pos[i].z);
+        fprintf(fp, "%f %f %f\n", particles->pos[i].x,
+                particles->pos[i].y, particles->pos[i].z);
     }
     fprintf(fp, "\n");
 
@@ -37,8 +41,9 @@ void vtk_writer_write(Particles *particles, unsigned int step)
     fprintf(fp, "\n");
 
     fprintf(fp, "POINT_DATA %d\n", N_particles);
-
-    fprintf(fp, "SCALARS Temperature float 1\n"); // Current particle temperature
+    
+    // Current particle temperature
+    fprintf(fp, "SCALARS Temperature float 1\n");
     fprintf(fp, "LOOKUP_TABLE default\n");
     for (unsigned int i = 0; i < N_particles; i++)
     {

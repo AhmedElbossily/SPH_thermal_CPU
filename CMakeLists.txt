@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(SPH_CPU)
+project(SPH_thermal_CPU)
 
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)

@@ -1,3 +1,0 @@
-/home/boss/Documents/SPH_CPU/buid/CMakeFiles/SPH_CPU.dir
-/home/boss/Documents/SPH_CPU/buid/CMakeFiles/edit_cache.dir
-/home/boss/Documents/SPH_CPU/buid/CMakeFiles/rebuild_cache.dir

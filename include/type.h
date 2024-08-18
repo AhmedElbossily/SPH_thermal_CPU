@@ -9,7 +9,6 @@
 #define USE_DOUBLE
 
 #ifdef USE_DOUBLE
-
 // built-in vector types
 #define float_t double
 #define float2_t glm::dvec2

@@ -25,7 +25,10 @@ Particles::~Particles()
     delete[] mass;
 }
 
-void Particles::set_properties(std::vector<float3_t> pos_vec, std::vector<float_t> T_vec, std::vector<float_t> cp_vec, std::vector<float_t> k_vec, std::vector<float_t> rho_vec, std::vector<float_t> h_vec, std::vector<float_t> mass_vec)
+void Particles::set_properties(std::vector<float3_t> pos_vec, std::vector<float_t> T_vec,
+                               std::vector<float_t> cp_vec, std::vector<float_t> k_vec,
+                               std::vector<float_t> rho_vec, std::vector<float_t> h_vec, 
+                               std::vector<float_t> mass_vec)
 {
     for (size_t i = 0; i < N; i++)
     {
@@ -39,5 +42,3 @@ void Particles::set_properties(std::vector<float3_t> pos_vec, std::vector<float_
         mass[i] = mass_vec[i];
     }
 }
-
-
