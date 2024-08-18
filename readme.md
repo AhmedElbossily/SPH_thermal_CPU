@@ -79,7 +79,7 @@ To run the simulation, execute the following command:
 
 ## Acknowledgements
 
-This project makes use of the excellent [iwf_mfree_gpu_3d](https://github.com/iwf-inspire/iwf_mfree_gpu_3d) open-source project developed at [ETHZ](https://ethz.ch/en.html) by:
+This project makes use of the excellent [iwf_mfree_gpu_3d](https://github.com/iwf-inspire/iwf_mfree_gpu_3d) open-source project developed at [ETHZ](https://ethz.ch/en.html).
 
 We are grateful for their contributions and the availability of their work, which has significantly aided the development of this software.
 
